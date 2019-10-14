@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
+  <title>Mutation Observers</title>
+</head>
+<body>
+  <h1>Mutation Observers</h1>
+  <h2>Use mutation observers to detect when elements get updated dynamically with attribute changes, removed/added to the DOM or have content updates. </h2>
+    <p>Using timers to simulate dynamic updates. </p>
+  <h3>Mutation observer watching for style updates. </h3>
+  <p>In the options object I'm using "attributes" and "subtree". The MO needs at least one of "attributes", "characterData", or "childList" to be set to true.</p>
+  <div id="styleBtns"><button class="styledBtn">button 1</button>
+    <button class="styledBtn">button 2</button>
+    <button class="styledBtn">button 3</button></div>
+    <div id="styleMo"class="results"></div>
+    <h3>Mutation observer watching for added/removed nodes. </h3>
+    <div id="removeBtns"><button class="styledBtnRemoved">button 4</button>
+      <button class="styledBtnRemoved">button 5</button>
+      <button class="styledBtnRemoved">button 6</button></div>
+      <div id="removeMo"class="results"></div>
+      <h3>Mutation observer watching for content updates. </h3>
+      <div id="charUpdates"  contenteditable='true'>Editable text, make updates to trigger mutation observer with characterData.</div>
+      <div id="charDataMo" class="results"></div>
+  <script src="script.js" charset="utf-8"></script>
+</body>
+</html>
